@@ -6,7 +6,7 @@ function Home() {
     const navigate = useNavigate();
 
     const goToBoard = () => {
-      navigate('/board3');
+      navigate('/board');
     };
   return (
     <header>

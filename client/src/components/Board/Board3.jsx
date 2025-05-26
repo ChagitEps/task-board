@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { HDate,gematriya  } from "hebcal";
+import { HDate,gematriya } from "hebcal";
 import "./Board3.css"
 export default function HebrewGregorianCalendar() {
   const [selectedDate,  setSelectedDate] = useState(new Date());
@@ -76,6 +76,7 @@ export default function HebrewGregorianCalendar() {
     setSelectedDate(newDate);
   };
 
+  
   const daysInMonth = getDaysInMonth(selectedDate);
   const currentMonth = selectedDate.getMonth();
   const currentYear = selectedDate.getFullYear();
@@ -174,16 +175,9 @@ export default function HebrewGregorianCalendar() {
 
       {/* לוח שנה */}
       <div className="calendar-grid"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(7, 1fr)",
-          gap: "5px",
-          marginTop: "20px",
-          maxWidth: "400px",
-          marginInline: "auto",
-        }}
+ 
       >
-        {["א'", "ב'", "ג'", "ד'", "ה'", "ו'", "ש'"].map((day, idx) => (
+        {["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"].map((day, idx) => (
           <div key={idx} style={{ fontWeight: "bold" }}>
             {day}
           </div>
